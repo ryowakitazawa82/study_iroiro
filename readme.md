@@ -2,3 +2,4 @@
 
 ## 図形をアニメーションさせる
 - transform: scale
+- delayは0.3sくらいが一般的
