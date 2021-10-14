@@ -6,13 +6,18 @@ body {
   width: 100px;
   height: 100px;
   background-color: orange;
-  -webkit-transition-property: border-radius;
-  transition-property: border-radius;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .box:hover {
-  border-radius: 50%;
+  -webkit-transform: scale(0.5, 2);
+          transform: scale(0.5, 2);
 }
 /*# sourceMappingURL=styles.css.map */
