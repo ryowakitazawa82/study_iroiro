@@ -6,19 +6,55 @@ body {
   width: 100px;
   height: 100px;
   background-color: orange;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  80% {
+    -webkit-transform: translateX(200px) rotate(360deg);
+            transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(300px) rotate(360deg);
+            transform: translateX(300px) rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  80% {
+    -webkit-transform: translateX(200px) rotate(360deg);
+            transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(300px) rotate(360deg);
+            transform: translateX(300px) rotate(360deg);
+  }
 }
 
 .box:hover {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
   background: skyblue;
-  -webkit-transform: translateX(100px) rotate(30deg);
-          transform: translateX(100px) rotate(30deg);
 }
 /*# sourceMappingURL=styles.css.map */

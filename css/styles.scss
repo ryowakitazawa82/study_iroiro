@@ -7,18 +7,46 @@ body {
     height: 100px;
     background-color: orange;
 
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-delay: .3s;
-    // transform-origin: top left ;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate;
+    // animation-direction: alternate-reverse;
+    // animation-timing-function: linear;
+
+    // transition-property: transform;
+    // transition-duration: .3s;
+    // transition-timing-function: ease-out;
+    // transition: transform .3s ease-out 1s, background-color .5s;
+    // transition-delay: .3s;
+    // transition-timing-function: cubic-bezier(0.46, 0.03, 0.85, 1.88);
+}
+
+@keyframes move {
+    0% {
+        transform: none;
+        animation-timing-function: linear;
+    }
+    80% {
+        transform: translateX(200px) rotate(360deg);
+    }
+    100% {
+        transform: translateX(300px) rotate(360deg);
+    }
 }
 
 .box:hover {
+    transform: translateX(30px);
+    background: skyblue;
+
     // transform: translate(50px, 20px);
     // transform: rotate(30deg);
-    background: skyblue;
+    // background: skyblue;
     // transform: scale(.5, 2);
 
-    transform: translateX(100px) rotate(30deg);
+    // transform: translateX(100px) rotate(30deg);
     // transform: rotate(30deg) translateX(100px);
 }
